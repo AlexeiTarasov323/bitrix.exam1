@@ -1,11 +1,10 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?
 $aMenuLinks = Array(
 	Array(
 		"О компании", 
-		"./", 
+		"index.php", 
 		Array(), 
-		Array(), 
+		Array("TEXT2"=>"это текст для пункта \"Пункт 1\""), 
 		"" 
 	),
 	Array(
@@ -20,7 +19,7 @@ $aMenuLinks = Array(
 		"mission.php", 
 		Array(), 
 		Array(), 
-		"" 
+		"CSite::InGroup(array(1,3,4,5))" 
 	),
 	Array(
 		"История", 
