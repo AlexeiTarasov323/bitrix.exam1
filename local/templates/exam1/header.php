@@ -136,7 +136,7 @@ if ($iHours >= 9 && $iHours <= 18) {
                     <div class="cnt">
                       <?php if (!$bIsMain): ?>
                         <header>
-                            <h1>Заголовок страницы</h1>
+                            <h1 id="pagetitle"><? $APPLICATION->ShowTitle(false); ?></h1>
                         </header>
                         <hr>
                         <? endif; ?>
