@@ -48,7 +48,7 @@ if ($iHours >= 9 && $iHours <= 18) {
             <div class="inner-wrap">
                 <div class="logo-block"><a href="" class="logo">Мебельный магазин</a>
                 </div>
-                <div class="main-phone-block">
+                <div class="main-phone-block">           
                     <? if ($bIsWorkTime): ?>
                          <?
                             $APPLICATION->IncludeFile(
@@ -65,7 +65,8 @@ if ($iHours >= 9 && $iHours <= 18) {
                                 Array("MODE" => "html")
                             );
                             ?>
-                    <? endif; ?>
+                    <? endif; ?>                  
+                    <div class="shedule">время работы с 9-00 до 18-00</div>
                 </div>
                 <div class="actions-block">
                     <form action="/" class="main-frm-search">
@@ -75,7 +76,7 @@ if ($iHours >= 9 && $iHours <= 18) {
                      <?$APPLICATION->IncludeComponent("bitrix:system.auth.form", "auth_form", Array(
 						"FORGOT_PASSWORD_URL" => "/login/index.php?forgot_password=yes",	// Страница забытого пароля
 							"PROFILE_URL" => " /login/user.php",	// Страница профиля
-							"REGISTER_URL" => "/login/index.php?register=yes",	// Страница регистрации
+							"REGISTER_URL" => "/login/user.php?register=yes",	// Страница регистрации
 							"SHOW_ERRORS" => "N",	// Показывать ошибки
 						),
 						false
@@ -102,16 +103,16 @@ if ($iHours >= 9 && $iHours <= 18) {
 		);?>
         <!-- /nav -->
         <!-- breadcrumbs -->
-        <?php if (!$bIsMain): ?>
-        <div class="breadcrumbs-box">
-            <div class="inner-wrap">
-                <a href="">Главная</a>
-                <a href="">Мебель</a>
-                <span>Выставки и события</span>
-            </div>
-        </div>
-        <?php endif; ?>
-        <!-- /breadcrumbs -->
+             <?php if (!$bIsMain): ?>
+                 <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "inner", Array(
+                    "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+                        "SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+                        "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+                    ),
+                    false
+                );?>
+            <?php endif; ?>
+		<!-- /breadcrumbs -->
         <!-- page -->
         <div class="page">
             <!-- content box -->
@@ -126,7 +127,7 @@ if ($iHours >= 9 && $iHours <= 18) {
                         <hr>
                         <? endif; ?>
                         <?php if ($bIsMain): ?>
-			<p>«Мебельная компания» осуществляет производство мебели на высококлассном оборудовании с применением минимальной доли ручного труда, что позволяет обеспечить высокое качество нашей продукции. Налажен производственный процесс как массового и индивидуального характера, что с одной стороны позволяет обеспечить постоянную номенклатуру изделий и индивидуальный подход – с другой.
+                            <p>«Мебельная компания» осуществляет производство мебели на высококлассном оборудовании с применением минимальной доли ручного труда, что позволяет обеспечить высокое качество нашей продукции. Налажен производственный процесс как массового и индивидуального характера, что с одной стороны позволяет обеспечить постоянную номенклатуру изделий и индивидуальный подход – с другой.
                             </p>                                    
                             <!-- index column -->
                             <div class="cnt-section index-column">

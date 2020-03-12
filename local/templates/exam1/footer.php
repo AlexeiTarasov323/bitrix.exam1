@@ -59,6 +59,7 @@ use Bitrix\Main\Localization\Loc;
                         </div>
                         
                        <!-- footer rew slider box -->
+                       
                        <div class="item-wrap">
 		                     <div class="rew-footer-carousel">
 								<div class="item">
