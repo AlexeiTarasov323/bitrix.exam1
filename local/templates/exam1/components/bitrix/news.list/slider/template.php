@@ -1,4 +1,3 @@
-
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var array $arParams */
 /** @var array $arResult */
@@ -33,11 +32,11 @@ $this->setFrameMode(true);
                         <div class="title">
                             <div class="photo-block">
                                 <? if ($arItem["DETAIL_PICTURE"]): ?>
-                                    <?php		
+                                    <?php       
                                     $arImageFile = CFile::ResizeImageGet(
                                         $arItem["DETAIL_PICTURE"]["ID"],
                                         ['width' => 39, 'height' => 39],
-                                        BX_RESIZE_IMAGE_PROPORTIONAL_ALT,
+                                        BX_RESIZE_IMAGE_EXACT,
                                         true
                                     );
                                     $sPictureSrc = $arImageFile['src'];                                   
@@ -66,10 +65,10 @@ $this->setFrameMode(true);
                             </div>
                         </div>
                         <? if ($arParams["DISPLAY_PREVIEW_TEXT"] != "N" && $arItem["PREVIEW_TEXT"]): ?>
-                            <div class="text-block">							
-								<? if ($arItem["PREVIEW_TEXT"]): ?>
+                            <div class="text-block">                            
+                                <? if ($arItem["PREVIEW_TEXT"]): ?>
                                     <?= $arItem["PREVIEW_TEXT"]; ?>
-                                <? endif ?>							                   
+                                <? endif ?>                                            
                             </div>
                         <? endif; ?>
                     </div>
@@ -81,4 +80,3 @@ $this->setFrameMode(true);
         <? endif; ?>
     </div>
 </div>
-      

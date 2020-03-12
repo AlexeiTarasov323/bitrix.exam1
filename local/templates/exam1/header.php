@@ -86,21 +86,25 @@ if ($iHours >= 9 && $iHours <= 18) {
         </header>
         <!-- /header -->
             <!-- nav -->
-        <?$APPLICATION->IncludeComponent("bitrix:menu", "top", Array(
-			"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-			"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-			"DELAY" => "N",	// Откладывать выполнение шаблона меню
-			"MAX_LEVEL" => "3",	// Уровень вложенности меню
-			"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-			"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-			"MENU_CACHE_TYPE" => "Y",	// Тип кеширования
-			"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-			"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-			"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-			"COMPONENT_TEMPLATE" => "top"
-			),
-			false
-		);?>
+        <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"top", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "3",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "Y",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "top"
+	),
+	false
+);?>
         <!-- /nav -->
         <!-- breadcrumbs -->
              <?php if (!$bIsMain): ?>

@@ -19,9 +19,9 @@ foreach($arResult as $arItem):?>
 	<?endif?>
 	<?if ($arItem["IS_PARENT"]):?>
 		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<li><a href="<?=$arItem["LINK"]?>" class="<?= $sMenuColor ?> <?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a>
-				<ul>
-				<? if ($arItem["PARAMS"]["TEXT"]):?>
+			<li><a href="<?=$arItem["LINK"]?>" class="<?= $arItem["PARAMS"]["COLOR"] ?>"><?=$arItem["TEXT"]?></a>
+				<ul>			
+			<? if ($arItem["PARAMS"]["TEXT"]):?>
 					<div class="menu-text">
 						<?= $arItem["PARAMS"]["TEXT"] ?>
 					</div>
@@ -33,12 +33,13 @@ foreach($arResult as $arItem):?>
 					<div class="menu-text">
 						<?= $arItem["PARAMS"]["TEXT2"] ?>
 					</div>
-			<? endif; ?>				
+			<? endif; ?>
 		<?endif?>        
 	<?else:?>
 		<?if ($arItem["PERMISSION"] > "D"):?>
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-				<li><a href="<?=$arItem["LINK"]?>" class="<?= $sMenuColor ?> <?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a></li>
+				<li><a href="<?=$arItem["LINK"]?>" class="<?= $sMenuColor ?> <?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a>
+				</li>
 			<?else:?>
 				<li<?if ($arItem["SELECTED"]):?> class="<?= $sMenuColor ?> item-selected"<?endif?>><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
 			<?endif?>
@@ -64,3 +65,6 @@ foreach($arResult as $arItem):?>
     </div>
     </nav>
 <?endif?>
+
+
+	
