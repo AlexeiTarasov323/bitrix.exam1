@@ -37,7 +37,7 @@ $this->setFrameMode(true);
                                     $arImageFile = CFile::ResizeImageGet(
                                         $arItem["DETAIL_PICTURE"]["ID"],
                                         ['width' => 39, 'height' => 39],
-                                        BX_RESIZE_IMAGE_EXACT,
+                                        BX_RESIZE_IMAGE_PROPORTIONAL_ALT,
                                         true
                                     );
                                     $sPictureSrc = $arImageFile['src'];                                   

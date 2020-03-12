@@ -78,7 +78,7 @@ use Bitrix\Main\Localization\Loc;
 		"DISPLAY_BOTTOM_PAGER" => "N",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PICTURE" => "N",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"FIELD_CODE" => array(
