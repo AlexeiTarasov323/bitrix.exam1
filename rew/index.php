@@ -32,7 +32,8 @@ $APPLICATION->SetTitle("Отзывы");
 		"DETAIL_PROPERTY_CODE" => array(
 			0 => "POSITION",
 			1 => "COMPANY",
-			2 => "",
+			2 => "DOCUMENTS",
+			3 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -54,8 +55,7 @@ $APPLICATION->SetTitle("Отзывы");
 		"LIST_PROPERTY_CODE" => array(
 			0 => "POSITION",
 			1 => "COMPANY",
-			2 => "FILES",
-			3 => "",
+			2 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
@@ -91,7 +91,7 @@ $APPLICATION->SetTitle("Отзывы");
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
-			"detail" => "#ELEMENT_ID#/",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false

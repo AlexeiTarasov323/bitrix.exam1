@@ -52,9 +52,8 @@ $this->setFrameMode(true);
         </div>
     <? endif ?>
 </div>
-
-
-<? if ($arResult["DISPLAY_PROPERTIES"]["FILES"]["DISPLAY_VALUE"]): ?>
+<? //pdf ?>
+<? if ($arResult["DISPLAY_PROPERTIES"]["DOCUMENTS"]["DISPLAY_VALUE"]): ?>
     <div class="exam-review-doc">
         <p>Документы:</p>
         <?
