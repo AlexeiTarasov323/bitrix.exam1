@@ -67,14 +67,12 @@ $this->setFrameMode(true);
         <? //<Фото> ?>
         <? if ($arParams["DISPLAY_PICTURE"] != "N"): ?>
             <div class="review-img-wrap">
-			
-			
                 <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">
                     <? if (is_array($arItem["DETAIL_PICTURE"])): ?>
                         <?php
                         $arImage = CFile::ResizeImageGet(
                             $arItem["DETAIL_PICTURE"]["ID"],
-                            ["width" => 66, "height" => 66],
+                            ["width" => 68, "height" => 50],
                             BX_RESIZE_IMAGE_EXACT,
                             true
                         );
